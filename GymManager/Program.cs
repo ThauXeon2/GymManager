@@ -31,6 +31,7 @@
             gym.AddMembership(new(new("b",11,false), 50, 12));
             Console.WriteLine(gym.TotalIncome());
             Console.WriteLine(gym.MostActive().Describe());
+            Console.WriteLine(gym.BestValue().Owner.Describe(),gym.BestValue().PricePerVisit());
         }
     }
 }

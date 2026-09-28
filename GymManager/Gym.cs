@@ -18,5 +18,6 @@ namespace GymManager
         public void AddMembership(Membership membership) => _memberships.Add(membership);
         public int TotalIncome() => _memberships.Sum(x => x.TotalCost());
         public Member MostActive() => _memberships.OrderByDescending(x => x.Owner.Visits).First().Owner;
+        public Membership BestValue()=>_memberships.OrderBy(x => x.PricePerVisit()).First();
     }
 }
